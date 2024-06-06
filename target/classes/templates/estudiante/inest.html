@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Estudiantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-view {
+            background-color: #007bff;
+        }
+        .btn-view:hover {
+            background-color: #0056b3;
+        }
+        .btn-create {
+            background-color: #28a745;
+        }
+        .btn-create:hover {
+            background-color: #218838;
+        }
+        .btn-grade {
+            background-color: #ffc107;
+        }
+        .btn-grade:hover {
+            background-color: #e0a800;
+        }
+        .btn-calendar {
+            background-color: #17a2b8;
+        }
+        .btn-calendar:hover {
+            background-color: #138496;
+        }
+        .btn-format {
+            background-color: #dc3545;
+        }
+        .btn-format:hover {
+            background-color: #c82333;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la Página de Estudiantes</h1>
+        <a href="/" class="btn-back">Volver al Inicio</a>
+        <a href="/estudiante/ver-proyectos" class="btn btn-view">Ver Proyectos</a>
+        <a href="/proyecto/agregar-proyecto" class="btn btn-create">Crear Proyecto</a>
+        <a href="/estudiante/calificacion-proyecto" class="btn btn-grade">Calificación Proyecto</a>
+        <a href="https://www.uts.edu.co/sitio/calendario-academico/#" class="btn btn-calendar">Calendario Académico</a>
+        <a href="https://drive.google.com/drive/folders/1p1PzaJ4IJFS4UjYacXA43nDSt4TDO_2m?usp=drive_link" class="btn btn-format">Formato de Grado</a>
+    </div>
+</body>
+</html>
