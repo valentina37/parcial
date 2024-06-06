@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Proyectos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .btn-back {
+            background-color: #6c757d;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .proyectos {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .proyecto {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .proyecto:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Proyectos</h1>
+        <div class="proyectos">
+            <div th:each="proyecto : ${proyectos}" class="proyecto">
+                <h3 th:text="${proyecto.nombre}">Nombre del Proyecto</h3>
+                <p th:text="${proyecto.descripcion}">Descripción del Proyecto</p>
+            </div>
+        </div>
+        <a href="/proyecto/agregar-proyecto" class="btn">Agregar Nuevo Proyecto</a>
+        <a href="/coordinador" class="btn btn-back">Volver al Coordinador</a>
+    </div>
+</body>
+</html>
